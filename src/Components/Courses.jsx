@@ -15,6 +15,7 @@ const data = [
   { id: 6, text: "محتوى متكامل ومنظم", img: img1 },
   { id: 7, text: "منهج محدث باستمرار", img: img1 },
   { id: 8, text: "مجتمع ضخم للمطورين", img: img1 },
+  { id: 9, text: "كورس إضافي جديد", img: img1 }, // الكارد الإضافي
 ];
 
 function Courses() {
@@ -27,21 +28,23 @@ function Courses() {
     autoplay: true,
     autoplaySpeed: 2500,
     pauseOnHover: true,
+    centerMode: true,
+    centerPadding: "80px", // 🔥 قللنا المساحة الجانبية
     responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 2 } },
-      { breakpoint: 900, settings: { slidesToShow: 1 } },
+      { breakpoint: 1280, settings: { slidesToShow: 2, centerPadding: "0px" } },
+      { breakpoint: 900, settings: { slidesToShow: 1, centerPadding: "0px" } },
     ],
   };
 
   return (
     <div className="w-[95%] md:w-4/5 mx-auto mt-24">
-      <h2 className="text-center text-4xl font-extrabold text-red-600 mb-14 tracking-wide">
+      <h2 className="text-center text-7xl font-extrabold text-red-600 pb-12 tracking-wide">
         الكورسات المميزة 🔥
       </h2>
 
       <Slider {...settings}>
         {data.map((d, index) => (
-          <div key={d.id} className="px-3 md:px-4">
+          <div key={d.id} className="px-2 md:px-3">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 30 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -63,7 +66,7 @@ function Courses() {
               </motion.div>
 
               {/* المحتوى */}
-              <div className="flex flex-col justify-center items-center text-center p-6 gap-6">
+              <div className="flex flex-col justify-center items-center text-center p-6 gap-5">
                 <h3 className="text-2xl font-bold text-gray-800 leading-relaxed">
                   {d.text}
                 </h3>
