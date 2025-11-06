@@ -38,7 +38,7 @@ export default function Hero() {
       {/* Navbar */}
       <div className="fixed top-0 w-full flex justify-center z-50 pointer-events-none">
         <nav
-          className={`w-[95%] max-w-[1300px] rounded-2xl px-8 py-4 my-3 flex justify-between items-center shadow-2xl pointer-events-auto transition-all duration-300 backdrop-blur-sm ${
+          className={`w-[95%] max-w-[1300px] rounded-2xl px-4 py-3 my-3 flex justify-between items-center shadow-2xl pointer-events-auto transition-all duration-300 backdrop-blur-sm ${
             darkMode ? "bg-[#1f1f1f]/90 text-gray-100" : "bg-white/90 text-gray-800"
           }`}
         >

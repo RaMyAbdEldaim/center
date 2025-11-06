@@ -37,7 +37,7 @@ function Courses() {
   };
 
   return (
-    <div className="w-[95%] md:w-4/5 mx-auto mt-24">
+    <div className="w-[95%] md:w-4/4.4 mx-auto mt-24 mb-44">
       <h2 className="text-center text-7xl font-extrabold text-red-600 pb-12 tracking-wide">
         الكورسات المميزة 🔥
       </h2>
